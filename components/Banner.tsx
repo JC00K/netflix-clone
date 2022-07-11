@@ -23,7 +23,13 @@ function Banner({ netflixOriginals }: Props) {
   }, [netflixOriginals]);
 
   return (
-    <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>
+    <div
+      className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'
+      onClick={() => {
+        setCurrentMovie(movie);
+        setShowModal(true);
+      }}
+    >
       <div className='absolute top-0 left-0 h-[95vh] w-screen -z-10'>
         {
           <Image
@@ -41,7 +47,13 @@ function Banner({ netflixOriginals }: Props) {
       </p>
 
       <div className='flex space-x-3'>
-        <button className='bannerButton bg-white text-black'>
+        <button
+          className='bannerButton bg-white text-black'
+          onClick={() => {
+            setCurrentMovie(movie);
+            setShowModal(true);
+          }}
+        >
           <FaPlay className='h-4 w-4 text-black md:h-7 md:w-7' />
           Play
         </button>

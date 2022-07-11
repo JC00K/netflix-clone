@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { useRecoilValue } from 'recoil';
 import { modalState } from '../atoms/modalAtom';
 import Banner from '../components/Banner';
